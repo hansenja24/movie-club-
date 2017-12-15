@@ -15,4 +15,21 @@ export class UserService {
     return this.users;
   }
 
+  getUserById(userId: string){
+    return this.database.object('users/' + userId);
+  }
+
+  updateAlbum(localUpdatedUser){
+    var userEntryFirebase = this.getUserById(localUpdatedUser.$key);
+    userEntryFirebase.update({name: localUpdatedUser.name,
+                                age: localUpdatedUser.age,
+                                genre: localUpdatedUser.genre,
+                                description: localUpdatedUser.description});
+  }
+
+  deleteAlbum(localDeletedUser){
+    var userEntryFirebase = this.getUserById(localDeletedUser.$key);
+    userEntryFirebase.remove();
+  }
+
 }
