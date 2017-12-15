@@ -1,6 +1,16 @@
 <h2>User List</h2>
 
-<div *ngFor="let user of users | async" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+  <option value = "allgenres"> View All Genres</option>
+  <option value = "Action">Action</option>
+  <option value = "Horror">Horror</option>
+  <option value = "Sci-Fi">Sci-Fi</option>
+  <option value = "Romance">Romance</option>
+  <option value = "Comedy">Comedy</option>
+  <option value = "Thriller">Thriller</option>
+</select>
+
+<div *ngFor="let user of users | async | genre:filterBygenre" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(user)"><em>{{user.name}}</em> -- {{user.genre}}</h3>
     <div *ngIf="currentRoute === '/admin'">

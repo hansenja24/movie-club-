@@ -13,6 +13,8 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class UserListComponent implements OnInit {
   users: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterBygenre: string = "allgenres";
+
 
   constructor(private router: Router, private userService: UserService) {}
 
@@ -24,4 +26,7 @@ export class UserListComponent implements OnInit {
       this.router.navigate(['userlist', clickedUser.$key]);
   };
 
+  onChange(optionFromMenu) {
+    this.filterBygenre = optionFromMenu;
+  }
 }
