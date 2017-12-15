@@ -1,26 +1,53 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Album to Inventory</h3>
+    <h3 class="panel-title">Add New User to Moviez Club</h3>
   </div>
   <div class="panel-body">
     <div>
       <div>
-        <label>Album Title:</label>
+        <label>User Name:</label>
         <br>
-        <input #newTitle>
+        <input #newName>
       </div>
 
       <div>
-        <label>Album Artist:</label>
+        <label>User Age:</label>
         <br>
-        <input #newArtist>
+        <input #newAge>
       </div>
 
       <div>
-        <label>Album Description:</label>
+        <label>User Description:</label>
         <br>
         <textarea #newDescription></textarea>
       </div>
+
+      <div>
+        <label>User Genre's Favorite:</label>
+        <br>
+        <select #newGenre>
+          <option value = "Action">Action</option>
+          <option value = "Horror">Horror</option>
+          <option value = "Sci-Fi">Sci-Fi</option>
+          <option value = "Romance">Romance</option>
+          <option value = "Comedy">Comedy</option>
+          <option value = "Thriller">Thriller</option>
+        </select>
+      </div>
+      <br>
+      <button class = "btn btn-info" (click)="submitForm(
+         newName.value,
+         newAge.value,
+         newDescription.value,
+         newGenre.value);
+         newName.value='';
+         newAge.value='';
+         newDescription.value='';
+         newGenre.value='';">Add</button>
     </div>
   </div>
+</div>
+
+<div>
+  <app-user-list></app-user-list>
 </div>

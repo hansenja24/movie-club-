@@ -15,11 +15,15 @@ export class UserService {
     return this.users;
   }
 
+  addUser(newUser: User) {
+    this.users.push(newUser);
+  }
+
   getUserById(userId: string){
     return this.database.object('users/' + userId);
   }
 
-  updateAlbum(localUpdatedUser){
+  updateUser(localUpdatedUser){
     var userEntryFirebase = this.getUserById(localUpdatedUser.$key);
     userEntryFirebase.update({name: localUpdatedUser.name,
                                 age: localUpdatedUser.age,
@@ -27,7 +31,7 @@ export class UserService {
                                 description: localUpdatedUser.description});
   }
 
-  deleteAlbum(localDeletedUser){
+  deleteUser(localDeletedUser){
     var userEntryFirebase = this.getUserById(localDeletedUser.$key);
     userEntryFirebase.remove();
   }

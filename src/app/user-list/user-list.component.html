@@ -3,5 +3,11 @@
 <div *ngFor="let user of users | async" (click)="goToDetailPage(user)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{user.name}}</em> -- {{user.genre}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{user.description}}
+
+      <hr>
+      <app-edit-user [selectedUser]="user"></app-edit-user>
+    </div>
   </div>
 </div>
