@@ -9,13 +9,20 @@
 <br>
 
 <label>New User Genre:</label>
-<input [(ngModel)]="selectedUser.genre">
+<select [(ngModel)] = "selectedUser.genre">
+  <option value = "Action">Action</option>
+  <option value = "Horror">Horror</option>
+  <option value = "Sci-Fi">Sci-Fi</option>
+  <option value = "Romance">Romance</option>
+  <option value = "Comedy">Comedy</option>
+  <option value = "Thriller">Thriller</option>
+</select>
 <br>
 
 <label>New User Description:</label>
 <input [(ngModel)]="selectedUser.description">
 <br>
 
-<button (click)="beginUpdatingUser(selectedUser)">Update</button>
+<button class = "btn btn-info" (click)="beginUpdatingUser(selectedUser)">Update</button>
 <hr>
-<button (click)="beginDeletingUser(selectedUser)">Delete</button>
+<button class = "btn btn-info" (click)="beginDeletingUser(selectedUser)">Delete</button>

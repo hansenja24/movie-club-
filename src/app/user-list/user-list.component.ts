@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
   }
 
   goToDetailPage(clickedUser) {
-      this.router.navigate(['users', clickedUser.$key]);
+      this.router.navigate(['userlist', clickedUser.$key]);
   };
 
 }

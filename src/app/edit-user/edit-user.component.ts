@@ -16,12 +16,11 @@ export class EditUserComponent implements OnInit {
   ngOnInit() {
   }
 
-  beginUpdatingAlbum(userToUpdate){
+  beginUpdatingUser(userToUpdate){
     this.userService.updateUser(userToUpdate);
-    console.log(this);
   }
 
-  beginDeletingAlbum(userToDelete){
+  beginDeletingUser(userToDelete){
     if(confirm("Are you sure you want to delete this User from the Moviez Club?")){
       this.userService.deleteUser(userToDelete);
     }
