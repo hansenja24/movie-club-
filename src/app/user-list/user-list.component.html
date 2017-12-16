@@ -10,6 +10,8 @@
   <option value = "Thriller">Thriller</option>
 </select>
 
+<br><br>
+
 <div *ngFor="let user of users | async | genre:filterBygenre" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(user)"><em>{{user.name}}</em> -- {{user.genre}}</h3>

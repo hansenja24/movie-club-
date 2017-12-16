@@ -16,6 +16,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { GenrePipe } from './genre.pipe';
+import { EventComponent } from './event/event.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     AdminComponent,
     EditUserComponent,
     UserListComponent,
-    GenrePipe
+    GenrePipe,
+    EventComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { AboutComponent }   from './about/about.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { EventComponent } from './event/event.component';
 
 
 
@@ -29,6 +30,10 @@ const appRoutes: Routes = [  {
   {
     path: 'userlist/:id',
     component: ProfileDetailComponent
+  },
+  {
+    path: 'event',
+    component: EventComponent
   }
 ];
 
