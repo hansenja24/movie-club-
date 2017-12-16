@@ -1,3 +1,13 @@
+# Local Zoo Project
+
+#### A program that will show a list of users in the Moviez Club. It also have several feature to add new users and edit it 12/15/17
+
+#### By **Hansen**
+
+## Description
+
+Movie Club is a program that take the list of the Users and save in the Firebase database. This program can add new users, edit any property in it, and also remove the users from the database. Furthermore, this program allow user to create any event and display it in the website
+
 # MovieClub
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
@@ -26,3 +36,33 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Prerequisites
+
+* A browser capable of running HTML, CSS, Bootstrap, Node.JS, Angular.
+
+## Deployment
+
+* Create webpage in the browser by using HTML, CSS, and Javascript
+
+## Built With
+
+  * CSS
+  * HTML
+  * Atom
+  * Command Prompt
+  * Bootstrap
+  * Github
+  * Node.JS
+  * Angular
+
+## Support and contact details
+
+ _Email me at Hansenja24@gmail.com with any questions, comments, or concerns._
+
+
+### License
+
+*{This software is licensed under the MIT license}*
+
+Copyright (c) 2017 **Hansen**
